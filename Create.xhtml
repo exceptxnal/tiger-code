@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="top">
+            <h:outputText value="#{bundle.CreateDirectoratesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="content">
+            <br/>
+            <br/>
+            <br/>
+            <h:panelGroup id="messagePanel" layout="block" styleClass="panelGridCenter">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form style="margin: 0 auto;">
+                <h:panelGrid columns="2" style="margin: 0 auto;" >
+                    <h:outputLabel value="#{bundle.CreateDirectoratesLabel_directorateid}" for="directorateid" />
+                    <h:inputText id="directorateid" value="#{directoratesController.selected.directorateid}" title="#{bundle.CreateDirectoratesTitle_directorateid}" required="true" requiredMessage="#{bundle.CreateDirectoratesRequiredMessage_directorateid}"/>
+                    <h:outputLabel value="#{bundle.CreateDirectoratesLabel_directoratename}" for="directoratename" />
+                    <h:inputText id="directoratename" value="#{directoratesController.selected.directoratename}" title="#{bundle.CreateDirectoratesTitle_directoratename}" required="true" requiredMessage="#{bundle.CreateDirectoratesRequiredMessage_directoratename}"/>
+                </h:panelGrid>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h:commandButton action="#{directoratesController.create}" value="#{bundle.CreateDirectoratesSaveLink}" style="height:25px"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:commandButton action="#{directoratesController.prepareList}" value="#{bundle.CreateDirectoratesShowAllLink}" immediate="true" style="height:25px"/> 
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:link outcome="/index" value="#{bundle.CreateDirectoratesIndexLink}"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+                <h:outputText value="&nbsp;"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
